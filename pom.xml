@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <packaging>jar</packaging>
+
+  <name>Bricker</name>
+  <description>Brick breaker game implemented in Java.</description>
+  <url>https://github.com/cuisse/bricker</url>
+
+  <groupId>io.github.cuisse</groupId>
+  <artifactId>bricker</artifactId>
+  <version>1.0.0</version>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://opensource.org/licenses/MIT</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Brayan Roman</name>
+      <url>https://github.com/cuisse</url>
+    </developer>
+  </developers>
+
+  <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <exec.mainClass>io.github.cuisse.bricker.Application</exec.mainClass>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.3.0</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>io.github.cuisse.bricker.Application</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+    <finalName>bricker</finalName>
+  </build>
+
+</project>
